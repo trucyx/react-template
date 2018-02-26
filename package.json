@@ -1,0 +1,72 @@
+{
+  "name": "piaofang",
+  "version": "0.1.0",
+  "description": "movie",
+  "main": "",
+  "scripts": {
+    "lint": "eslint --ext .jsx,.js src build",
+    "dev-server": "node build/dev-server.js",
+    "start": "nodemon server/ & webpack-dev-server --open --config build/webpack.config.server.js",
+    "dev": "webpack --config  build/webpack.config.dev.js --progress -w",
+    "build": "webpack --config build/webpack.config.prod.js --progress"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mirreal/piaofang.git"
+  },
+  "keywords": [
+    "piaofang",
+    "movie"
+  ],
+  "author": "mirreal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mirreal/piaofang/issues"
+  },
+  "homepage": "https://github.com/mirreal/piaofang#readme",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "classnames": "^2.2.5",
+    "es6-promise": "^4.1.1",
+    "iscroll": "^5.2.0",
+    "koa": "^2.3.0",
+    "koa-request": "^1.0.0",
+    "nodemon": "^1.15.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "request": "^2.81.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.18",
+    "css-loader": "^0.28.4",
+    "eslint": "^4.18.1",
+    "eslint-config-link": "^0.1.2",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-react": "^7.7.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.9",
+    "html-webpack-plugin": "^2.30.1",
+    "http-server": "^0.11.1",
+    "node-sass": "^4.7.2",
+    "postcss-cssnext": "^3.0.2",
+    "postcss-loader": "^2.0.6",
+    "postcss-scss": "^1.0.2",
+    "precss": "^2.0.0",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.3.0",
+    "webpack-bundle-analyzer": "^2.11.0",
+    "webpack-dev-server": "^2.6.1",
+    "webpack-manifest-plugin": "^1.3.2",
+    "webpack-merge": "^4.1.2"
+  }
+}
