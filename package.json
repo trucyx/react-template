@@ -1,32 +1,35 @@
 {
-  "name": "piaofang",
+  "name": "react-template",
   "version": "0.1.0",
-  "description": "movie",
+  "description": "react template",
   "main": "",
   "scripts": {
     "lint": "eslint --ext .jsx,.js src build",
     "dev-server": "node build/dev-server.js",
+    "server": "webpack-dev-server --open --config build/webpack.config.server.js",
     "start": "nodemon server/ & webpack-dev-server --open --config build/webpack.config.server.js",
     "dev": "webpack --config  build/webpack.config.dev.js --progress -w",
     "build": "webpack --config build/webpack.config.prod.js --progress"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mirreal/piaofang.git"
+    "url": "git+https://github.com/trucyx/react-template.git"
   },
   "keywords": [
     "piaofang",
-    "movie"
+    "reacr",
+    "template"
   ],
   "author": "mirreal",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mirreal/piaofang/issues"
+    "url": "https://github.com/trucyx/react-template/issues"
   },
-  "homepage": "https://github.com/mirreal/piaofang#readme",
+  "homepage": "https://github.com/trucyx/react-template#readme",
   "dependencies": {
     "axios": "^0.16.2",
     "classnames": "^2.2.5",
+    "core-js": "^3.0.1",
     "es6-promise": "^4.1.1",
     "iscroll": "^5.2.0",
     "koa": "^2.3.0",
@@ -37,36 +40,32 @@
     "request": "^2.81.0"
   },
   "devDependencies": {
-    "babel-core": "^6.25.0",
-    "babel-eslint": "^7.2.3",
-    "babel-loader": "^7.1.1",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1",
-    "clean-webpack-plugin": "^0.1.18",
-    "css-loader": "^0.28.4",
-    "eslint": "^4.18.1",
+    "@babel/core": "^7.4.4",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^2.0.2",
+    "css-loader": "^2.1.1",
+    "eslint": "^5.16.0",
     "eslint-config-link": "^0.1.2",
-    "eslint-loader": "^1.9.0",
-    "eslint-plugin-import": "^2.9.0",
-    "eslint-plugin-react": "^7.7.0",
-    "extract-text-webpack-plugin": "^3.0.2",
-    "file-loader": "^1.1.9",
-    "html-webpack-plugin": "^2.30.1",
-    "http-server": "^0.11.1",
-    "node-sass": "^4.7.2",
-    "postcss-cssnext": "^3.0.2",
-    "postcss-loader": "^2.0.6",
-    "postcss-scss": "^1.0.2",
-    "precss": "^2.0.0",
-    "sass-loader": "^6.0.6",
-    "style-loader": "^0.18.2",
-    "url-loader": "^0.6.2",
-    "webpack": "^3.3.0",
-    "webpack-bundle-analyzer": "^2.11.0",
-    "webpack-dev-server": "^2.6.1",
-    "webpack-manifest-plugin": "^1.3.2",
-    "webpack-merge": "^4.1.2"
+    "eslint-loader": "^2.1.2",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-react": "^7.13.0",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.12.0",
+    "postcss": "^7.0.16",
+    "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.6.0",
+    "postcss-scss": "^2.0.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.31.0",
+    "webpack-bundle-analyzer": "^3.3.2",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.3.1",
+    "webpack-manifest-plugin": "^2.0.4",
+    "webpack-merge": "^4.2.1"
   }
 }
