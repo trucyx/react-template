@@ -1,6 +1,8 @@
 module.exports = {
     syntax: 'postcss-scss',
     plugins: {
-        'postcss-cssnext': {}
+        'postcss-preset-env': {
+            // browsers: 'last 6 versions'
+        }
     }
 }

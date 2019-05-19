@@ -55,20 +55,18 @@ module.exports = merge(baseConfig, {
     output: {
         path: path.resolve('dist')
     },
+    optimization: {
+        splitChunks: {
+            name: 'vendor',
+            filename: '[name].[hash:8].js'
+        }
+    },
     plugins: [
-        new CleanWebpackPlugin([
-            'dist'
-        ], {
-            root: path.resolve()
-        }),
+        new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             title: 'piaofang'
         }),
         new ManifestPlugin(),
-        new webpack.optimize.CommonsChunkPlugin({
-            name: 'vendor',
-            filename: '[name].[hash:8].js'
-        }),
         new webpack.optimize.ModuleConcatenationPlugin()
     ]
 })
