@@ -1,8 +1,8 @@
 module.exports = {
     globals: {
-        jest: true,
-        describe: true,
-        expect: true,
-        it: true
+        jest: flase,
+        describe: flase,
+        expect: flase,
+        it: flase
     }
 };
