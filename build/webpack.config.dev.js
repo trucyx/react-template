@@ -9,10 +9,10 @@ const ManifestPlugin = require('webpack-manifest-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 const baseConfig = require('./webpack.config.base')
-const cssLoader = require('./css-loader')
+const cssLoaderGenerator = require('./css.loader.config')
 
-const styleLoader = cssLoader(false)
-styleLoader.unshift({
+const cssLoaderWithCssModules = cssLoaderGenerator()
+cssLoaderWithCssModules.unshift({
     loader: 'style-loader'
 })
 
@@ -27,27 +27,7 @@ module.exports = merge(baseConfig, {
             },
             {
                 test: /\.(scss|css)$/,
-                use: styleLoader
-                // format
-                // use: [
-                //     {
-                //         loader: 'style-loader'
-                //     },
-                //     {
-                //         loader: 'css-loader',
-                //         options: {
-                //             minimize: false,
-                //             module: true,
-                //             localIdentName: '[name]__[local]___[hash:base64:5]'
-                //         }
-                //     },
-                //     {
-                //         loader: 'postcss-loader'
-                //     },
-                //     {
-                //         loader: 'sass-loader'
-                //     }
-                // ]
+                use: cssLoaderWithCssModules
             }
         ]
     },

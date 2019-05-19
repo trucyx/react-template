@@ -2,8 +2,11 @@
  * @fileOverview webapck base config
  */
 const path = require('path')
+const { IS_DEVELOPMENT } = require('./env')
 
 module.exports = {
+    mode: IS_DEVELOPMENT ? 'development' : 'production',
+    context: path.resolve(__dirname, '../src'),
     module: {
         rules: [
             {
@@ -15,7 +18,7 @@ module.exports = {
                 test: /\.(png|jpg|svg)$/,
                 loader: 'url-loader',
                 options: {
-                    limit: 8192 // 8k
+                    limit: 4096 // 4k
                 }
             },
             {
@@ -45,7 +48,7 @@ module.exports = {
         ]
     },
     entry: {
-        piaofang: './src/pages/index',
+        piaofang: 'pages/index',
         vendor: [
             'axios',
             'es6-promise',
