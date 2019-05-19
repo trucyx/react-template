@@ -50,8 +50,6 @@ module.exports = {
     entry: {
         piaofang: 'pages/index',
         vendor: [
-            'axios',
-            'es6-promise',
             'classnames',
             'react',
             'react-dom'
@@ -60,8 +58,14 @@ module.exports = {
     output: {
         filename: '[name].[hash:8].js',
         chunkFilename: '[name].[chunkhash:8].js',
-        // filename: '[name].js',
         libraryTarget: 'var'
+    },
+    optimization: {
+        splitChunks: {
+            chunks: 'all',
+            name: 'vendor',
+            filename: '[name].[chunkhash:8].js'
+        }
     },
     externals: [
         {

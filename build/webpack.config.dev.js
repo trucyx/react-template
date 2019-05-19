@@ -35,12 +35,6 @@ module.exports = merge(baseConfig, {
     output: {
         path: path.resolve('dist')
     },
-    optimization: {
-        splitChunks: {
-            name: 'vendor',
-            filename: '[name].[hash:8].js'
-        }
-    },
     plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
